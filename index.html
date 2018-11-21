@@ -1,0 +1,87 @@
+<!Doctype html>
+<html>
+    <head>
+    <title>Scientific calculator</title>
+    <link rel="stylesheet" type="text/css"href="css/calcu.css">
+    </head>
+    <body>
+        
+      <center><h1>Scentific Calculator</h1></center>
+    <div id="container">
+    <div class="screen"><form name="calculator"><input type="text" name="display" id="screen" size="20" readonly maxlength="50">
+        <div id="result"></div>
+        </form></div>
+    <div class="buttons">
+    
+    <p>
+        <input type="button" value="SIN" class="button brown" onclick="calculator.display.value=Math.sin(calculator.display.value)"> 
+        <input type="button" value="COS" class="button brown" onclick="calculator.display.value=Math.cos(calculator.display.value)">
+        <input type="button" value="TAN" class="button brown" 
+        onclick="calculator.display.value=Math.tan(calculator.display.value)">
+        <input type="button" value="(-)" class="button brown" onclick="changeSign(calculator.display.value)">
+        <input type="button" value="ABS" class="button brown" onclick="calculator.display.value=Math.abs(calculator.display.value)">
+    </p>
+        
+     <p>
+        <input type="button" value="&radic;" class="button brown"
+        onclick="calculator.display.value=Math.sqrt(calculator.display.value)"> 
+        <input type="button" value="SQR" class="button brown"
+        onclick="calculator.display.value=Math.pow(calculator.display.value,2)">
+        <input type="button" value="^" class="button brown" onclick="calculator.display.value=Math.pow(calculator.display.value,calculator.display.value)">
+        <input type="button" value="LOG" class="button brown" onclick="calculator.display.value=Math.log(calculator.display.value)">
+        <input type="button" value="IN" class="button brown" onclick="calculator.display.value=Math.e">
+    </p>
+        
+    <p>
+        <input type="button" value="CLR" class="button brown" onclick="calculator.display.value=''"> 
+        <input type="button" value="(" class="button brown" onclick="calculator.display.value+='('">
+        <input type="button" value=")" class="button brown" onclick="calculator.display.value+=')'">
+        <input type="button" value="M+" class="button brown" onclick="calculator.display.value+='M+'">
+        <input type="button" value="MOD" class="button brown" onclick="calculator.display.value+='%'">
+    </p>
+    
+    <p>
+        <input type="button" value="7" class="button brown" id="but_seven"> 
+        <input type="button" value="8" class="button brown" id="but_eight"> 
+        <input type="button" value="9" class="button brown" id="but_nine">
+        
+        <input type="button" value="DEL" class="button red" onclick="calculator.display.value=calculator.display.value=calculator.display.value.substring(0,calculator.display.value.length-1)">
+        <input type="button" value="EXT" class="button red" onclick="calculator.display.value=''">
+    </p>
+        
+    <p>
+        <input type="button" value="4" class="button brown" id="but_four"> 
+        <input type="button" value="5" class="button brown"id="but_five"> 
+        <input type="button" value="6" class="button brown"id="but_six"> 
+        <input type="button" value="×" class="button brown" onclick="calculator.display.value+='*'">
+        <input type="button" value="/" class="button brown" onclick="calculator.display.value+='/'">
+        
+    </p>
+        
+    <p>
+         <input type="button" value="1" class="button brown" id="but_one"> 
+        <input type="button" value="2" class="button brown" id="but_two"> 
+        <input type="button" value="3" class="button brown"id="but_three"> 
+        <input type="button" value="+" class="button brown"
+         onclick="calculator.display.value+='+'">    
+        <input type="button" value="-" class="button brown" 
+        onclick="calculator.display.value+='-'">
+     
+    </p>
+        
+    <p>
+        <input type="button" value="0" class="button brown" onclick="calculator.display.value+='0'">
+        <input type="button" value="." class="button brown" onclick="calculator.display.value+='.'">
+        <input type="button" value="EXP" class="button brown" onclick="calculator.display.value+=Math.exp(calculator.display.value)">
+        <input type="button" value="Pi" class="button brown" onclick="calculator.display.value+=Math.PI">
+        <input type="button" value="=" class="button brown" onclick="calculator.display.value=eval(calculator.display.value)">
+    </p>
+          
+</div>  
+              </div>
+     
+     <footer id ="foot">&copy; Pawan Sharma</footer> 
+    </body>
+    
+    <script src="js/script.js" ></script>
+</html>
